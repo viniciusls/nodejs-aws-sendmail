@@ -48,7 +48,7 @@ module.exports.send = (application, req, res) => {
         ],
     };
     
-    const ses = application.config.snsess();
+    const ses = application.config.ses();
     
     ses.sendEmail(params, (err, data) => {
         if (err) res.send(err);

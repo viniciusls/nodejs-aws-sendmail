@@ -1,9 +1,9 @@
 module.exports = (application) => {
-    application.get('/messages/create', (req, res) => {
-        application.app.controllers.messages.create(application, req, res);
+    application.get('/mail/create', (req, res) => {
+        application.app.controllers.mail.create(application, req, res);
     });
 
-    application.post('/messages/send', (req, res) => {
-        application.app.controllers.messages.send(application, req, res);
+    application.post('/mail/send', (req, res) => {
+        application.app.controllers.mail.send(application, req, res);
     });
 };
