@@ -42,9 +42,9 @@ module.exports.send = (application, req, res) => {
                 Data: body.subject
             }
         },
-        Source: 'vinicius@viniciusls.com.br',
+        Source: body.fromaddress,
         ReplyToAddresses: [
-            'vinicius@viniciusls.com.br',
+            (body.replytoaddress || body.fromaddress),
         ],
     };
     
